@@ -1,0 +1,462 @@
+{
+  "kind": "reference_metadata",
+  "migrated_on": "2026-11-16",
+  "source_root": "/home/devops/investment-assistant",
+  "sources": [
+    "config/signal_pipeline.json",
+    "config/opinion.json",
+    "config/config.json",
+    "config/accounts.json",
+    "news_collector/config/curation.json",
+    "news_collector/config/polymarket.json"
+  ],
+  "status": "historical_reference_not_runtime_config",
+  "signal_reference": {
+    "signal_weights": {
+      "opinion": 0.4,
+      "report": 0.3,
+      "feature": 0.3
+    },
+    "signal_features": {
+      "base": [
+        "trend_0",
+        "reverse_0"
+      ]
+    },
+    "features": {
+      "version": "v1",
+      "basic": {
+        "trend": {
+          "short_ema_span": 5,
+          "long_ema_span": 60,
+          "short_vol_window": 5,
+          "long_vol_window": 60,
+          "tanh_scale": 0.2,
+          "calibration_bins": 101,
+          "calibration_min_periods_floor": 30,
+          "calibration_min_periods_divisor": 4
+        },
+        "reverse": {
+          "baseline_window_divisor": 3,
+          "baseline_min_periods_cap": 30,
+          "tanh_scale": 0.3,
+          "baseline_center_weight": 1.0,
+          "baseline_std_weight": 0.5,
+          "adaptive_scale_enabled": true,
+          "target_abs_quantile": 0.98,
+          "target_abs_output": 0.98,
+          "scale_smoothing_span": 20,
+          "scale_window_years": 1,
+          "scale_min_periods_floor": 30,
+          "scale_min_periods_divisor": 4
+        },
+        "volatility": {
+          "regime_low_threshold": 0.2,
+          "regime_high_threshold": 0.8
+        }
+      }
+    },
+    "signals": {
+      "enabled": [
+        "default"
+      ],
+      "default_id": "default",
+      "params": {
+        "default": {
+          "builder": "default",
+          "base_features": [
+            "trend_0",
+            "reverse_0"
+          ],
+          "feature_weight": 0.3,
+          "report_weight": 0.3,
+          "report_half_life_days": 30,
+          "feature_clip_abs": 1.0,
+          "signal_clip_abs": 1.0
+        }
+      }
+    },
+    "opinion_decay": {
+      "half_life_days": 30
+    }
+  },
+  "opinion_reference": {
+    "window_days": 32,
+    "half_life_days": 7,
+    "confidence_tanh_divisor": 2.0,
+    "adaptive_confidence_divisor": {
+      "enabled": false,
+      "lookback_days": 30,
+      "tail_target_abs_score": 0.9,
+      "candidate_min_abs_total_score": 0.5,
+      "candidate_min_supporting_doc_count": 2,
+      "ema_span": 10,
+      "clip_min": 1.5,
+      "clip_max": 3.5
+    },
+    "score_clip_abs": 1.0,
+    "authors": {
+      "default_weight": 1.0,
+      "concentration_cap_multiple": 3.0,
+      "manual_weights": {
+        "培风客": 3.0
+      }
+    }
+  },
+  "strategy_reference": {
+    "enabled": [
+      "long_select",
+      "spot_swap_pair"
+    ],
+    "budgets": {
+      "long_select": 0.7,
+      "spot_swap_pair": 0.3
+    },
+    "params": {
+      "long_select": {
+        "top_n": 10,
+        "long_only": true,
+        "positive_only": true,
+        "signal_key": "latest_signal",
+        "signal_id": "default"
+      },
+      "spot_swap_pair": {
+        "pairs": [
+          {
+            "long_symbol": "BTCUSDT",
+            "short_symbol": "BTCUSDT_SWAP"
+          }
+        ]
+      }
+    }
+  },
+  "limits_reference": {
+    "allow_short": true
+  },
+  "account_risk_reference": [
+    {
+      "id": "A_STOCK",
+      "name": "A股账户",
+      "asset_class": "CN_STOCK",
+      "currency": "CNY",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "A_SHARE"
+    },
+    {
+      "id": "US_STOCK",
+      "name": "美股账户",
+      "asset_class": "US_STOCK",
+      "currency": "USD",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "US_STOCK"
+    },
+    {
+      "id": "HK_STOCK",
+      "name": "港股账户",
+      "asset_class": "HK_STOCK",
+      "currency": "HKD",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "HK_STOCK"
+    },
+    {
+      "id": "CN_FUTURES",
+      "name": "中国期货账户",
+      "asset_class": "CN_FUTURES",
+      "currency": "CNY",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "CN_FUTURES"
+    },
+    {
+      "id": "US_FUTURES",
+      "name": "海外期货账户",
+      "asset_class": "US_FUTURES",
+      "currency": "USD",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "US_FUTURES"
+    },
+    {
+      "id": "TRADFI_STOCK_FUTURES",
+      "name": "股票代币账户",
+      "asset_class": "TRADFI_STOCK_FUTURES",
+      "currency": "USDT",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "TRADFI_STOCK_FUTURES"
+    },
+    {
+      "id": "CRYPTO",
+      "name": "加密账户",
+      "asset_class": "CRYPTO",
+      "currency": "USDT",
+      "max_share_of_total": 0.3,
+      "max_symbol_of_account": 0.4,
+      "market_filter": "CRYPTO"
+    }
+  ],
+  "curation_reference": {
+    "max_summary_documents": 30,
+    "min_macro_effective_len": 200,
+    "max_effective_len_warning": 25000,
+    "garbage_detection": {
+      "min_effective_len": 300,
+      "noise_term_hits_threshold": 4,
+      "max_raw_size_for_short_text": 3000,
+      "css_noise_threshold": 5
+    },
+    "feed_noise": {
+      "disable_garbage_ratio": 0.5,
+      "disable_avg_effective_len": 450,
+      "disable_relevance_ratio": 0.35,
+      "disable_thin_ratio": 0.5
+    }
+  },
+  "prediction_market_reference": {
+    "top_n_events": 200,
+    "summary_top_n": 10,
+    "display_max_items": 10,
+    "biggest_movers_min_volume": 500000,
+    "price_move_window_days": 3,
+    "actionable_price_min": 0.02,
+    "actionable_price_max": 0.98,
+    "exclude_archived": true,
+    "exclude_tag_ids": [
+      "1",
+      "100350",
+      "745",
+      "28",
+      "21",
+      "102368",
+      "1312",
+      "136",
+      "102859",
+      "139"
+    ],
+    "exclude_topics": [
+      "weather",
+      "sports",
+      "pop_culture",
+      "local_politics",
+      "crypto_mentions",
+      "crypto_launch"
+    ],
+    "blacklist_keywords": [
+      "governor",
+      "gubernatorial",
+      "mayor",
+      "mayoral",
+      "city council",
+      "county commissioner",
+      "school board",
+      "state senate",
+      "state house",
+      "state assembly",
+      "state legislator",
+      "state representative",
+      "aliens",
+      "jesus",
+      "nobel prize",
+      "nobel peace prize",
+      "parliamentary election",
+      "senate primary winner",
+      "re:hit__",
+      "re:settle (above|below|at)\\b",
+      "re:\\$[0-9,]+",
+      "re:(reach|hit|dip to|drop to|rise to|climb to)\\s+\\$",
+      "re:what (price|level) will",
+      "re:what will .{0,30} (hit|reach|be at|close at)",
+      "re:by end of (month|year|week|q[1-4]|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)",
+      "re:(close|trade|settle|end) (above|below) [0-9]",
+      "re:(above|below) [0-9,]+\\s*(usd|\\$|k|m)?"
+    ],
+    "keep_categories": [
+      "macro",
+      "central_bank",
+      "politics",
+      "regulation",
+      "index_market_structure",
+      "commodities_energy",
+      "industry_policy"
+    ],
+    "volume_rank_weight": 0.5,
+    "price_move_rank_weight": 0.5,
+    "theme_bucket": {
+      "enabled": true,
+      "display_cap_per_bucket": 2,
+      "display_cap_overrides": {
+        "elections": 3
+      },
+      "fill_remaining_slots": true,
+      "bucket_order": [
+        "military_conflict",
+        "china",
+        "middle_east",
+        "central_bank",
+        "elections",
+        "commodities",
+        "company_tech",
+        "other"
+      ],
+      "buckets": {
+        "military_conflict": {
+          "keywords": [
+            "military operation",
+            "military operations",
+            "military strike",
+            "military strikes",
+            "strike iran",
+            "strikes iran",
+            "war",
+            "ceasefire",
+            "attack",
+            "invasion",
+            "conflict",
+            "hormuz",
+            "kharg",
+            "regime fall"
+          ],
+          "tags": [
+            "War",
+            "Military",
+            "Geopolitics"
+          ],
+          "keep_categories": [
+            "politics"
+          ]
+        },
+        "china": {
+          "keywords": [
+            "china",
+            "chinese",
+            "xi jinping",
+            "ccp",
+            "beijing",
+            "taiwan",
+            "two sessions",
+            "plenum",
+            "pboc",
+            "people's bank of china"
+          ],
+          "tags": [
+            "China",
+            "Taiwan"
+          ],
+          "keep_categories": [
+            "politics",
+            "central_bank",
+            "industry_policy",
+            "macro",
+            "regulation"
+          ]
+        },
+        "middle_east": {
+          "keywords": [
+            "iran",
+            "israel",
+            "gaza",
+            "hormuz",
+            "hezbollah",
+            "middle east",
+            "netanyahu",
+            "kharg"
+          ],
+          "tags": [
+            "Geopolitics",
+            "Iran",
+            "Middle East",
+            "Israel"
+          ],
+          "keep_categories": [
+            "politics"
+          ]
+        },
+        "central_bank": {
+          "keywords": [
+            "fed",
+            "fomc",
+            "rate cut",
+            "rate hike",
+            "interest rate",
+            "jerome powell"
+          ],
+          "tags": [
+            "Fed Rates",
+            "Jerome Powell",
+            "Fed",
+            "Economic Policy"
+          ],
+          "keep_categories": [
+            "central_bank"
+          ]
+        },
+        "elections": {
+          "keywords": [
+            "election",
+            "presidential",
+            "midterms",
+            "balance of power",
+            "senate in 2026",
+            "senate race",
+            "house race",
+            "who will win",
+            "party control"
+          ],
+          "tags": [
+            "Global Elections",
+            "Elections",
+            "World Elections",
+            "US Elections"
+          ],
+          "keep_categories": [
+            "politics"
+          ],
+          "min_volume": 500000
+        },
+        "commodities": {
+          "keywords": [
+            "gold",
+            "silver",
+            "crude oil",
+            "copper",
+            "commodity",
+            "oil",
+            "brent",
+            "wti"
+          ],
+          "tags": [
+            "Commodities",
+            "Oil",
+            "Gold"
+          ],
+          "keep_categories": [
+            "commodities_energy"
+          ]
+        },
+        "company_tech": {
+          "keywords": [
+            "ipo",
+            "spacex",
+            "ai model",
+            "openai",
+            "gpt",
+            "goldman sachs",
+            "underwriter"
+          ],
+          "tags": [
+            "Tech",
+            "Big Tech",
+            "AI",
+            "OpenAI"
+          ],
+          "keep_categories": [
+            "industry_policy"
+          ]
+        }
+      }
+    }
+  }
+}

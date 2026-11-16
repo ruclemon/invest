@@ -1,0 +1,2035 @@
+{
+  "kind": "reference_metadata",
+  "migrated_on": "2026-11-16",
+  "source_root": "/home/devops/investment-assistant",
+  "sources": [
+    "config/asset_class_etf_map.json",
+    "config/us_etf_aum_issuer_registry.json"
+  ],
+  "status": "historical_reference_not_runtime_config",
+  "mapping": {
+    "version": "v0.0.1",
+    "canonical": [
+      {
+        "ticker": "QQQ",
+        "market": "US",
+        "asset_class": "US_TECH",
+        "name_pattern": "NASDAQ 100",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "Nasdaq 100 proxy"
+      },
+      {
+        "ticker": "SPY",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "S&P 500 proxy"
+      },
+      {
+        "ticker": "TLT",
+        "market": "US",
+        "asset_class": "US_TREASURY",
+        "name_pattern": "TREASURY",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "US treasury proxy"
+      },
+      {
+        "ticker": "GLD",
+        "market": "US",
+        "asset_class": "GOLD",
+        "name_pattern": "GOLD",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "Gold proxy"
+      },
+      {
+        "ticker": "IAU",
+        "market": "US",
+        "asset_class": "GOLD",
+        "name_pattern": "GOLD",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "Gold proxy"
+      },
+      {
+        "ticker": "510300.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "沪深300",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "CSI300 proxy"
+      },
+      {
+        "ticker": "3033.HK",
+        "market": "HK",
+        "asset_class": "HK_TECH",
+        "name_pattern": "恒生科技",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "Hang Seng Tech proxy"
+      },
+      {
+        "ticker": "588000.SH",
+        "market": "CN",
+        "asset_class": "STAR50",
+        "name_pattern": "科创50",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "STAR50 proxy"
+      },
+      {
+        "ticker": "513040.SH",
+        "market": "CN",
+        "asset_class": "HK_TECH",
+        "name_pattern": "港股通互联网",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HK_TECH"
+        ],
+        "industry_bucket": "HK_TECH",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN HK internet proxy ETF"
+      },
+      {
+        "ticker": "588220.SH",
+        "market": "CN",
+        "asset_class": "STAR50",
+        "name_pattern": "科创100",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN STAR100 semiconductor-style growth ETF"
+      },
+      {
+        "ticker": "EWY",
+        "market": "US",
+        "asset_class": "KOREA_EQUITY",
+        "name_pattern": "KOREA",
+        "mapping_confidence": "high",
+        "mapping_source": "canonical_proxy_seed",
+        "is_proxy_etf": true,
+        "is_formal_aggregate_member": true,
+        "note": "Korea proxy"
+      },
+      {
+        "ticker": "IVV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "S&P 500 ETF"
+      },
+      {
+        "ticker": "VOO",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "S&P 500 ETF"
+      },
+      {
+        "ticker": "2840.HK",
+        "market": "HK",
+        "asset_class": "GOLD",
+        "name_pattern": "SPDR金",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "HK gold ETF"
+      },
+      {
+        "ticker": "82840.HK",
+        "market": "HK",
+        "asset_class": "GOLD",
+        "name_pattern": "SPDR金",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "HK RMB gold ETF"
+      },
+      {
+        "ticker": "9840.HK",
+        "market": "HK",
+        "asset_class": "GOLD",
+        "name_pattern": "SPDR金",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "HK USD gold ETF"
+      },
+      {
+        "ticker": "IGV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SOFTWARE",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "SOFTWARE"
+        ],
+        "industry_bucket": "SOFTWARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US software ETF"
+      },
+      {
+        "ticker": "SOXX",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SEMICONDUCTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US semiconductor ETF"
+      },
+      {
+        "ticker": "ITA",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "AEROSPACE DEFENSE",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "DEFENSE"
+        ],
+        "industry_bucket": "DEFENSE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US defense ETF"
+      },
+      {
+        "ticker": "XLE",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ENERGY",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "ENERGY"
+        ],
+        "industry_bucket": "ENERGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US energy ETF"
+      },
+      {
+        "ticker": "XLV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "HEALTHCARE",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US healthcare ETF"
+      },
+      {
+        "ticker": "XLP",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "CONSUMER STAPLES",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "CONSUMER_STAPLES"
+        ],
+        "industry_bucket": "CONSUMER_STAPLES",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US consumer staples ETF"
+      },
+      {
+        "ticker": "VGT",
+        "market": "US",
+        "asset_class": "US_TECH",
+        "name_pattern": "TECHNOLOGY",
+        "mapping_confidence": "high",
+        "mapping_source": "industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "TECHNOLOGY"
+        ],
+        "industry_bucket": "TECHNOLOGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US technology ETF"
+      },
+      {
+        "ticker": "AAAU",
+        "market": "US",
+        "asset_class": "GOLD",
+        "name_pattern": "GOLD",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US gold ETF"
+      },
+      {
+        "ticker": "XLK",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "TECHNOLOGY",
+        "mapping_confidence": "high",
+        "mapping_source": "phase2_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "TECHNOLOGY",
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "TECHNOLOGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US technology ETF"
+      },
+      {
+        "ticker": "IYW",
+        "market": "US",
+        "asset_class": "US_TECH",
+        "name_pattern": "TECHNOLOGY",
+        "mapping_confidence": "high",
+        "mapping_source": "phase2_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "TECHNOLOGY"
+        ],
+        "industry_bucket": "TECHNOLOGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US technology ETF"
+      },
+      {
+        "ticker": "XLY",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "CONSUMER DISCRETIONARY",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US consumer discretionary ETF"
+      },
+      {
+        "ticker": "IYH",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "HEALTHCARE",
+        "mapping_confidence": "high",
+        "mapping_source": "phase2_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US healthcare ETF"
+      },
+      {
+        "ticker": "FENY",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ENERGY",
+        "mapping_confidence": "high",
+        "mapping_source": "phase2_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "ENERGY"
+        ],
+        "industry_bucket": "ENERGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US energy ETF"
+      },
+      {
+        "ticker": "IYE",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ENERGY",
+        "mapping_confidence": "high",
+        "mapping_source": "phase2_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "ENERGY"
+        ],
+        "industry_bucket": "ENERGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US energy ETF"
+      },
+      {
+        "ticker": "XBI",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "BIOTECH",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US biotech ETF"
+      },
+      {
+        "ticker": "IBB",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "BIOTECH",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US biotech ETF"
+      },
+      {
+        "ticker": "BBH",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "BIOTECH",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US biotech ETF"
+      },
+      {
+        "ticker": "SLV",
+        "market": "US",
+        "asset_class": "SILVER",
+        "name_pattern": "SILVER",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US silver ETF"
+      },
+      {
+        "ticker": "GLDM",
+        "market": "US",
+        "asset_class": "GOLD",
+        "name_pattern": "GOLD",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US gold ETF"
+      },
+      {
+        "ticker": "IAUM",
+        "market": "US",
+        "asset_class": "GOLD",
+        "name_pattern": "GOLD",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US gold ETF"
+      },
+      {
+        "ticker": "EWJ",
+        "market": "US",
+        "asset_class": "JAPAN_EQUITY",
+        "name_pattern": "JAPAN",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US-listed Japan ETF"
+      },
+      {
+        "ticker": "USO",
+        "market": "US",
+        "asset_class": "CRUDE_OIL",
+        "name_pattern": "OIL",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "note": "US crude oil ETF"
+      },
+      {
+        "ticker": "KWEB",
+        "market": "US",
+        "asset_class": "HK_TECH",
+        "name_pattern": "CHINA INTERNET",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "OTHER_MARKET"
+        ],
+        "industry_bucket": "OTHER_MARKET",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "US-listed China internet ETF"
+      },
+      {
+        "ticker": "512880.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "证券",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "BROKER"
+        ],
+        "industry_bucket": "BROKER",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN broker ETF"
+      },
+      {
+        "ticker": "512480.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "半导体",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN semiconductor ETF"
+      },
+      {
+        "ticker": "512940.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "有色",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "NONFERROUS"
+        ],
+        "industry_bucket": "NONFERROUS",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN nonferrous ETF"
+      },
+      {
+        "ticker": "515370.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "光伏",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "NEW_ENERGY"
+        ],
+        "industry_bucket": "NEW_ENERGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN new-energy ETF"
+      },
+      {
+        "ticker": "512170.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "医疗",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_industry_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN healthcare ETF"
+      },
+      {
+        "ticker": "159922.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "中证500",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "CN CSI500 ETF"
+      },
+      {
+        "ticker": "512500.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "中证500",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "CN CSI500 ETF"
+      },
+      {
+        "ticker": "513260.SH",
+        "market": "CN",
+        "asset_class": "HK_TECH",
+        "name_pattern": "恒生科技",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HK_TECH"
+        ],
+        "industry_bucket": "HK_TECH",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN listed Hang Seng Tech ETF"
+      },
+      {
+        "ticker": "518600.SH",
+        "market": "CN",
+        "asset_class": "GOLD",
+        "name_pattern": "上海金",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "CN Shanghai gold ETF"
+      },
+      {
+        "ticker": "561380.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "电网设备",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "POWER"
+        ],
+        "industry_bucket": "POWER",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN power-grid equipment ETF"
+      },
+      {
+        "ticker": "159363.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "人工智能",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN AI ETF kept on existing semiconductor-style bucket"
+      },
+      {
+        "ticker": "159545.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "港股通高股息低波动",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "OTHER_MARKET"
+        ],
+        "industry_bucket": "OTHER_MARKET",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN listed Hong Kong high-dividend low-vol ETF"
+      },
+      {
+        "ticker": "159920.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "恒生ETF",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "OTHER_MARKET"
+        ],
+        "industry_bucket": "OTHER_MARKET",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN listed Hang Seng broad-market ETF"
+      },
+      {
+        "ticker": "513630.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "港股通低波红利",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "OTHER_MARKET"
+        ],
+        "industry_bucket": "OTHER_MARKET",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN listed Hong Kong dividend low-vol ETF"
+      },
+      {
+        "ticker": "159566.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "新能源电池",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "NEW_ENERGY"
+        ],
+        "industry_bucket": "NEW_ENERGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN battery ETF"
+      },
+      {
+        "ticker": "159567.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "创新药",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN listed Hong Kong innovative-drug ETF"
+      },
+      {
+        "ticker": "159851.SZ",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "金融科技",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "FINANCIAL"
+        ],
+        "industry_bucket": "FINANCIAL",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN fintech ETF"
+      },
+      {
+        "ticker": "515980.SH",
+        "market": "CN",
+        "asset_class": "CHINA_A_SHARE",
+        "name_pattern": "人工智能",
+        "mapping_confidence": "high",
+        "mapping_source": "cn_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true,
+        "note": "CN AI ETF kept on existing semiconductor-style bucket"
+      },
+      {
+        "ticker": "VTI",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "TOTAL STOCK MARKET",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VEA",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DEVELOPED MARKETS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VUG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IEFA",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DEVELOPED MARKETS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VTV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IEMG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "EMERGING MARKETS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VXUS",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "TOTAL INTERNATIONAL",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IWF",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL 1000 GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VWO",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "EMERGING MARKETS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IJH",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MID-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VIG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DIVIDEND APPRECIATION",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IJR",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SMALL-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VO",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MID-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "ITOT",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "TOTAL STOCK MARKET",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "RSP",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "EQUAL WEIGHT",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHD",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DIVIDEND",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IWM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL 2000",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "EFA",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "EAFE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "QQQM",
+        "market": "US",
+        "asset_class": "US_TECH",
+        "name_pattern": "NASDAQ 100",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VYM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "HIGH DIVIDEND",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VB",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SMALL-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IWD",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL 1000 VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IVW",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500 GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHX",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "LARGE-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VT",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "TOTAL WORLD",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VEU",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ALL-WORLD EX US",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHF",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "INTERNATIONAL EQUITY",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "XLF",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "FINANCIAL SELECT SECTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "LARGE-CAP GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "QUAL",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "QUALITY FACTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IVE",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500 VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "LARGE-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IWR",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL MID-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IWB",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL 1000",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPYG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500 GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SMH",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SEMICONDUCTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "note": "US large AUM ETF seed",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true
+      },
+      {
+        "ticker": "DRAM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MEMORY",
+        "mapping_confidence": "high",
+        "mapping_source": "tail_mapping_review",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "note": "US semiconductor ETF",
+        "industry_buckets": [
+          "SEMICONDUCTOR"
+        ],
+        "industry_bucket": "SEMICONDUCTOR",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true
+      },
+      {
+        "ticker": "DIA",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DOW JONES",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHB",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "BROAD MARKET",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VONG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL 1000 GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "DGRO",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DIVIDEND GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPDW",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DEVELOPED WORLD EX-US",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VNQ",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "REAL ESTATE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VBR",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SMALL-CAP VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPYV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500 VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "XLI",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "INDUSTRIAL SELECT SECTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "XLC",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "COMMUNICATION SERVICES",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "ACWI",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ACWI",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IDEV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DEVELOPED MARKETS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "EEM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "EMERGING MARKETS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VXF",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "EXTENDED MARKET",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "MDY",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P MIDCAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "OEF",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 100",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "MGK",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MEGA CAP GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "MGC",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MEGA CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VONE",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "RUSSELL 1000",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPLG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P 500",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPTM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "TOTAL MARKET",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "ESGU",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ESG AWARE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "NOBL",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "DIVIDEND ARISTOCRATS",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IUSG",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "CORE GROWTH",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "IUSV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "CORE VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHV",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "LARGE-CAP VALUE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MID-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SCHA",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "SMALL-CAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPMD",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P MIDCAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "SPSM",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "S&P SMALLCAP",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "XLU",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "UTILITIES SELECT SECTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "XLRE",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "REAL ESTATE SELECT SECTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VCR",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "CONSUMER DISCRETIONARY",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      },
+      {
+        "ticker": "VHT",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "HEALTH CARE",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "note": "US large AUM ETF seed",
+        "industry_buckets": [
+          "HEALTHCARE"
+        ],
+        "industry_bucket": "HEALTHCARE",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true
+      },
+      {
+        "ticker": "VDE",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "ENERGY",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "industry",
+        "note": "US large AUM ETF seed",
+        "industry_buckets": [
+          "ENERGY"
+        ],
+        "industry_bucket": "ENERGY",
+        "industry_mapping_confidence": "high",
+        "is_formal_industry_member": true
+      },
+      {
+        "ticker": "XLB",
+        "market": "US",
+        "asset_class": "US_EQUITY",
+        "name_pattern": "MATERIALS SELECT SECTOR",
+        "mapping_confidence": "high",
+        "mapping_source": "us_large_aum_seed",
+        "is_proxy_etf": false,
+        "is_formal_aggregate_member": true,
+        "etf_bucket": "broad",
+        "note": "US large AUM ETF seed"
+      }
+    ],
+    "keyword_hints": [
+      {
+        "asset_class": "GOLD",
+        "keywords": [
+          "GOLD",
+          "黄金",
+          "上海金"
+        ],
+        "mapping_confidence": "high"
+      },
+      {
+        "asset_class": "US_TREASURY",
+        "keywords": [
+          "TREASURY",
+          "美债",
+          "国债"
+        ],
+        "mapping_confidence": "medium"
+      },
+      {
+        "asset_class": "US_TECH",
+        "keywords": [
+          "NASDAQ 100",
+          "纳斯达克100"
+        ],
+        "mapping_confidence": "medium"
+      },
+      {
+        "asset_class": "CHINA_A_SHARE",
+        "keywords": [
+          "沪深300",
+          "沪深三百",
+          "CSI 300",
+          "中证500",
+          "中证1000",
+          "中证A500",
+          "A500",
+          "上证50",
+          "上证180",
+          "创业板",
+          "创业板50",
+          "红利"
+        ],
+        "mapping_confidence": "high"
+      },
+      {
+        "asset_class": "HK_TECH",
+        "keywords": [
+          "恒生科技",
+          "港股互联网",
+          "港股通互联网",
+          "港股通科技",
+          "HANG SENG TECH"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "asset_class": "STAR50",
+        "keywords": [
+          "科创50",
+          "科创100",
+          "科创板50",
+          "科创创业50"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      }
+    ],
+    "industry_hints": [
+      {
+        "industry_bucket": "BROKER",
+        "keywords": [
+          "证券"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "SEMICONDUCTOR",
+        "keywords": [
+          "半导体",
+          "芯片"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "NONFERROUS",
+        "keywords": [
+          "有色"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "NEW_ENERGY",
+        "keywords": [
+          "光伏",
+          "新能源"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "HEALTHCARE",
+        "keywords": [
+          "医疗",
+          "创新药",
+          "生物医药"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "BANK",
+        "keywords": [
+          "银行"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "POWER",
+        "keywords": [
+          "电力",
+          "公用事业"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "COMMUNICATION",
+        "keywords": [
+          "通信"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "AUTOMOTIVE",
+        "keywords": [
+          "汽车"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "CHEMICAL",
+        "keywords": [
+          "化工"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "TRANSPORTATION",
+        "keywords": [
+          "交通",
+          "运输"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "TECHNOLOGY",
+        "keywords": [
+          "机器人"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "SOFTWARE",
+        "keywords": [
+          "软件",
+          "游戏",
+          "动漫"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      },
+      {
+        "industry_bucket": "DEFENSE",
+        "keywords": [
+          "军工",
+          "国防"
+        ],
+        "market": "CN",
+        "mapping_confidence": "high"
+      }
+    ],
+    "exclude_rules": [
+      {
+        "field": "name",
+        "pattern": "LEVERAGED",
+        "reason": "leveraged_etf"
+      },
+      {
+        "field": "name",
+        "pattern": "INVERSE",
+        "reason": "inverse_etf"
+      },
+      {
+        "field": "name",
+        "pattern": "ULTRASHORT",
+        "reason": "inverse_etf"
+      },
+      {
+        "field": "name",
+        "pattern": "BEAR",
+        "reason": "inverse_or_short_etf"
+      }
+    ],
+    "manual_overrides": []
+  },
+  "issuers": [
+    {
+      "issuer": "ROUNDHILL",
+      "status": "live",
+      "source_kind": "roundhill_daily_nav_csv",
+      "sample_ticker": "DRAM",
+      "sample_url": "https://www.roundhillinvestments.com/assets/data/FilepointRoundhill.40RU.RU_DailyNAV.csv",
+      "note": "Official cross-fund DailyNAV CSV with Net Assets by ticker."
+    },
+    {
+      "issuer": "VANGUARD",
+      "status": "live",
+      "source_kind": "vanguard_characteristic_api",
+      "sample_ticker": "VOO",
+      "sample_url": "https://investor.vanguard.com/investment-products/etfs/profile/voo",
+      "note": "Official vmf/api/{ticker}/characteristic endpoint with shareClassTotalNetAssets (fallback totalNetAssets) in the JSON payload."
+    },
+    {
+      "issuer": "SPDR",
+      "status": "live",
+      "source_kind": "spdr_fund_quick_info_html",
+      "sample_ticker": "SPY",
+      "sample_url": "https://www.ssga.com/us/en/intermediary/etfs/spdr-sp-500-etf-trust-spy",
+      "note": "Official SPDR page with hidden fund-quick-info JSON."
+    },
+    {
+      "issuer": "ISHARES",
+      "status": "live",
+      "source_kind": "ishares_product_html",
+      "sample_ticker": "IVV",
+      "sample_url": "https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf",
+      "note": "Official product page with rendered Net Assets of Fund card."
+    },
+    {
+      "issuer": "VANECK",
+      "status": "live",
+      "source_kind": "vaneck_product_html",
+      "sample_ticker": "SMH",
+      "sample_url": "https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/",
+      "note": "Official product page with static Net Assets block."
+    },
+    {
+      "issuer": "KRANESHARES",
+      "status": "live",
+      "source_kind": "kraneshares_etf_html",
+      "sample_ticker": "KWEB",
+      "sample_url": "https://kraneshares.com/etf/kweb/",
+      "note": "Official ETF page with static Net Assets table row; requires browser-like request headers."
+    }
+  ]
+}

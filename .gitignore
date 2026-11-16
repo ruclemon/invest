@@ -1,0 +1,7 @@
+/private/
+/data/
+/reports/
+/.agent/tmp/*
+!/.agent/tmp/.gitkeep
+*.local.json
+.DS_Store

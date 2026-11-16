@@ -1,0 +1,1456 @@
+{
+  "kind": "reference_metadata",
+  "migrated_on": "2026-11-16",
+  "source_root": "/home/devops/investment-assistant",
+  "sources": [
+    "config/asset_registry.json",
+    "news_collector/config/asset_aliases.json",
+    "config/watchlists.example.json",
+    "config/opinion.json",
+    "config/search_heat_asset_classes.json",
+    "config/asset_heat_universe.json"
+  ],
+  "status": "historical_reference_not_runtime_config",
+  "assets": [
+    {
+      "asset_class": "GOLD",
+      "display_name_zh": "黄金",
+      "proxy_symbol": "GC=F",
+      "keywords": [
+        "gold price",
+        "黄金",
+        "金价"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "SILVER",
+      "display_name_zh": "白银",
+      "proxy_symbol": "AG_SHF",
+      "keywords": [
+        "silver price",
+        "白银",
+        "银价"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "CRUDE_OIL",
+      "display_name_zh": "原油",
+      "proxy_symbol": "CL=F",
+      "keywords": [
+        "crude oil",
+        "原油",
+        "油价"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "BITCOIN",
+      "display_name_zh": "比特币",
+      "proxy_symbol": "BTCUSDT",
+      "keywords": [
+        "bitcoin",
+        "比特币",
+        "加密货币"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "US_TECH",
+      "display_name_zh": "美国科技成长股",
+      "proxy_symbol": "QQQ",
+      "keywords": [
+        "Nasdaq 100",
+        "纳斯达克100",
+        "美股科技股"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "US_EQUITY",
+      "display_name_zh": "美国大盘股",
+      "proxy_symbol": "SPY",
+      "keywords": [
+        "S&P 500",
+        "标普500",
+        "美股"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "US_TREASURY",
+      "display_name_zh": "美国国债 / 美债利率",
+      "proxy_symbol": "TLT",
+      "keywords": [
+        "US Treasury yield",
+        "美债收益率",
+        "美国十年期国债"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "CHINA_A_SHARE",
+      "display_name_zh": "中国A股核心资产",
+      "proxy_symbol": "510300.SH",
+      "keywords": [
+        "CSI 300",
+        "沪深300",
+        "A股"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "CHINA_BOND",
+      "display_name_zh": "中国长债 / 中国国债",
+      "proxy_symbol": "TL_CFX",
+      "keywords": [
+        "China long bond",
+        "中国国债",
+        "中国长债"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "COPPER",
+      "display_name_zh": "铜",
+      "proxy_symbol": "CU_SHF",
+      "keywords": [
+        "copper price",
+        "铜价",
+        "有色金属"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "LITHIUM",
+      "display_name_zh": "锂 / 碳酸锂",
+      "proxy_symbol": "LC_GFE",
+      "keywords": [
+        "lithium carbonate",
+        "碳酸锂",
+        "锂价"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "JAPAN_EQUITY",
+      "display_name_zh": "日本股市",
+      "proxy_symbol": "EWJ",
+      "keywords": [
+        "Nikkei 225",
+        "日经225",
+        "日股"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "KOREA_EQUITY",
+      "display_name_zh": "韩国股市",
+      "proxy_symbol": "EWY",
+      "keywords": [
+        "KOSPI",
+        "韩国股市",
+        "韩股"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "HK_TECH",
+      "display_name_zh": "港股科技",
+      "proxy_symbol": "3033.HK",
+      "keywords": [
+        "Hang Seng Tech",
+        "恒生科技",
+        "中概互联"
+      ],
+      "enabled": true
+    },
+    {
+      "asset_class": "STAR50",
+      "display_name_zh": "科创50",
+      "proxy_symbol": "588000.SH",
+      "keywords": [
+        "STAR 50",
+        "科创板",
+        "硬科技"
+      ],
+      "enabled": true
+    }
+  ],
+  "legacy_aliases": {
+    "macro_target_assets": [
+      "US_TREASURY",
+      "US_EQUITY",
+      "US_TECH",
+      "GC",
+      "CL",
+      "CHINA_BOND",
+      "BITCOIN",
+      "HK_TECH",
+      "CHINA_A_SHARE",
+      "LITHIUM",
+      "COPPER",
+      "JAPAN_EQUITY",
+      "HOGS",
+      "CORN",
+      "SOYBEAN"
+    ],
+    "assets": {
+      "US_TREASURY": {
+        "hard": [
+          "US10Y",
+          "UST10Y",
+          "10Y Treasury",
+          "10-year Treasury",
+          "10年美债",
+          "美债收益率",
+          "US 10Y yield",
+          "Treasury note futures",
+          "ZN=F",
+          "IEF",
+          "TLT",
+          "IEI"
+        ],
+        "soft": [
+          "TNX",
+          "ZN",
+          "Treasury yield",
+          "Treasury yields",
+          "yield curve",
+          "收益率曲线",
+          "长端利率"
+        ]
+      },
+      "US_EQUITY": {
+        "hard": [
+          "S&P 500",
+          "SPX",
+          "标普500",
+          "标普",
+          "E-mini S&P 500",
+          "ES=F",
+          "SPY",
+          "IVV",
+          "VOO"
+        ],
+        "soft": [
+          "ES",
+          "US equities",
+          "美股大盘"
+        ]
+      },
+      "US_TECH": {
+        "hard": [
+          "Nasdaq",
+          "NASDAQ",
+          "Nasdaq 100",
+          "NASDAQ 100",
+          "纳指",
+          "纳斯达克",
+          "E-mini Nasdaq 100",
+          "NQ=F",
+          "QQQ",
+          "QQQM"
+        ],
+        "soft": [
+          "NQ",
+          "US tech",
+          "美股科技"
+        ]
+      },
+      "AU": [
+        "AU",
+        "gold",
+        "Gold",
+        "黄金",
+        "金价",
+        "COMEX黄金",
+        "GC",
+        "GC=F",
+        "XAU",
+        "XAUUSD"
+      ],
+      "WTI": [
+        "WTI",
+        "原油",
+        "油价",
+        "CL",
+        "CL=F",
+        "Brent",
+        "布伦特"
+      ],
+      "ETH": {
+        "hard": [
+          "ETH",
+          "Ethereum",
+          "ethereum",
+          "以太坊",
+          "ETHUSDT",
+          "ETHUSDT_SWAP"
+        ],
+        "soft": []
+      },
+      "GC": {
+        "hard": [
+          "Gold",
+          "gold",
+          "黄金",
+          "金价",
+          "XAU",
+          "XAUUSD",
+          "COMEX Gold",
+          "COMEX Gold Futures",
+          "GC=F",
+          "GLD",
+          "IAU"
+        ],
+        "soft": [
+          "precious metals",
+          "贵金属"
+        ]
+      },
+      "CL": {
+        "hard": [
+          "WTI",
+          "Brent",
+          "crude",
+          "Crude",
+          "原油",
+          "油价",
+          "布伦特",
+          "WTI Crude",
+          "WTI Crude Futures",
+          "Brent Crude",
+          "CL=F",
+          "USO",
+          "BNO"
+        ],
+        "soft": [
+          "energy prices",
+          "能源价格"
+        ]
+      },
+      "CHINA_BOND": {
+        "hard": [
+          "CNBOND",
+          "中国债券",
+          "国债",
+          "30年国债期货",
+          "TL2606.CFX",
+          "地方债",
+          "信用债",
+          "中债",
+          "国开债",
+          "政金债",
+          "债券ETF",
+          "国债ETF",
+          "政金债ETF",
+          "十年国债期货",
+          "10年国债期货",
+          "TL",
+          "TL.CFX",
+          "511010",
+          "511220"
+        ],
+        "soft": [
+          "T主连",
+          "T",
+          "债市",
+          "债券收益率",
+          "利率债",
+          "中国利率",
+          "十年国债",
+          "30年国债"
+        ]
+      },
+      "BITCOIN": {
+        "hard": [
+          "BTC",
+          "Bitcoin",
+          "bitcoin",
+          "比特币",
+          "BTCUSDT",
+          "BTC-USD",
+          "比特币现货ETF",
+          "IBIT",
+          "FBTC",
+          "ARKB",
+          "BITO"
+        ],
+        "soft": [
+          "crypto",
+          "加密货币",
+          "数字资产"
+        ]
+      },
+      "HK_TECH": {
+        "hard": [
+          "HSTECH",
+          "Hang Seng Tech",
+          "恒生科技",
+          "恒科",
+          "恒生科技指数",
+          "恒生科技ETF",
+          "南方恒生科技",
+          "南方恒生科技ETF",
+          "3033.HK",
+          "3067.HK",
+          "513180"
+        ],
+        "soft": [
+          "Hong Kong tech",
+          "港股科技",
+          "中国科技股"
+        ]
+      },
+      "CHINA_A_SHARE": {
+        "hard": [
+          "CSI300",
+          "沪深300",
+          "HS300",
+          "000300",
+          "沪深300ETF",
+          "300ETF",
+          "510300",
+          "159919",
+          "CSI 300 Index Futures",
+          "IF=F"
+        ],
+        "soft": [
+          "IF",
+          "A股",
+          "A-share",
+          "A shares",
+          "Chinese shares",
+          "Chinese equities",
+          "中国股票",
+          "内地股市"
+        ]
+      },
+      "LITHIUM": {
+        "hard": [
+          "LITHIUM",
+          "Lithium",
+          "lithium",
+          "锂",
+          "锂价",
+          "碳酸锂",
+          "氢氧化锂",
+          "碳酸锂期货",
+          "锂ETF",
+          "LIT"
+        ],
+        "soft": [
+          "LC",
+          "LC主连",
+          "锂矿",
+          "锂盐",
+          "动力电池",
+          "固态电池"
+        ]
+      },
+      "COPPER": {
+        "hard": [
+          "COPPER",
+          "Copper",
+          "copper",
+          "铜",
+          "铜价",
+          "LME copper",
+          "COMEX copper",
+          "铜期货",
+          "沪铜",
+          "沪铜期货",
+          "CU2604.SHF",
+          "HG=F",
+          "CPER",
+          "COPX"
+        ],
+        "soft": [
+          "HG",
+          "CU",
+          "CU主连",
+          "铜矿",
+          "industrial metals",
+          "工业金属"
+        ]
+      },
+      "JAPAN_EQUITY": {
+        "hard": [
+          "NIKKEI",
+          "Nikkei",
+          "Nikkei 225",
+          "日经",
+          "日经225",
+          "Nikkei futures",
+          "Nikkei 225 futures",
+          "NKD=F",
+          "1321.T",
+          "EWJ"
+        ],
+        "soft": [
+          "Japanese equities",
+          "日本股市"
+        ]
+      },
+      "HOGS": {
+        "hard": [
+          "HOGS",
+          "生猪",
+          "猪价",
+          "生猪期货",
+          "LH",
+          "LH.DCE",
+          "猪肉",
+          "仔猪",
+          "能繁母猪",
+          "生猪存栏"
+        ],
+        "soft": [
+          "猪周期",
+          "养殖",
+          "畜牧",
+          "非洲猪瘟"
+        ]
+      },
+      "CORN": {
+        "hard": [
+          "CORN",
+          "Corn",
+          "corn",
+          "玉米",
+          "玉米期货",
+          "玉米价格",
+          "C.DCE",
+          "ZC=F",
+          "CORN ETF"
+        ],
+        "soft": [
+          "饲料粮",
+          "谷物",
+          "粮食价格",
+          "玉米淀粉"
+        ]
+      },
+      "SOYBEAN": {
+        "hard": [
+          "SOYBEAN",
+          "Soybean",
+          "soybean",
+          "大豆",
+          "大豆期货",
+          "豆粕",
+          "豆油",
+          "A.DCE",
+          "M.DCE",
+          "ZS=F",
+          "ZM=F",
+          "ZL=F"
+        ],
+        "soft": [
+          "油脂油料",
+          "压榨",
+          "进口大豆",
+          "大豆压榨利润"
+        ]
+      },
+      "SILVER": {
+        "hard": [
+          "Silver",
+          "silver",
+          "白银",
+          "银价",
+          "XAG",
+          "XAGUSD",
+          "AG",
+          "SI=F",
+          "SLV",
+          "AG_SHF",
+          "SIVR",
+          "COMEX silver",
+          "沪银",
+          "上期所白银"
+        ],
+        "soft": [
+          "AG主连",
+          "沪银主连",
+          "银期货"
+        ]
+      },
+      "PRECIOUS_METALS": {
+        "hard": [
+          "precious metals",
+          "Precious Metals",
+          "贵金属",
+          "黄金白银",
+          "Gold and Silver",
+          "Platinum",
+          "platinum",
+          "Palladium",
+          "palladium",
+          "铂金",
+          "钯金",
+          "XPT",
+          "XPD",
+          "PA=F",
+          "PL=F"
+        ],
+        "soft": [
+          "金银",
+          "金属投资",
+          "保值资产",
+          "贵金属板块"
+        ]
+      },
+      "CHINA_TECH": {
+        "hard": [
+          "China tech",
+          "Chinese tech",
+          "CHINA_TECH",
+          "中国科技",
+          "港股科技",
+          "中概股",
+          "腾讯",
+          "阿里",
+          "美团",
+          "京东",
+          "拼多多",
+          "字节跳动",
+          "百度",
+          "0700.HK",
+          "9988.HK",
+          "9618.HK",
+          "BABA",
+          "TCEHY",
+          "PDD",
+          "BIDU"
+        ],
+        "soft": [
+          "China internet",
+          "中国互联网",
+          "互联网巨头",
+          "中概科技",
+          "科技股"
+        ]
+      },
+      "HK_STOCK": {
+        "hard": [
+          "Hong Kong stocks",
+          "HK stocks",
+          "港股",
+          "香港股票",
+          "恒生指数",
+          "恒指",
+          "HSI",
+          "Hang Seng Index",
+          "港股市场",
+          "HK_STOCK"
+        ],
+        "soft": [
+          "香港市场",
+          "港交所",
+          "HKEX",
+          "联交所"
+        ]
+      },
+      "CN_STOCK": {
+        "hard": [
+          "A股",
+          "A-share",
+          "A shares",
+          "CN_STOCK",
+          "沪深",
+          "上证",
+          "深证",
+          "SSE",
+          "SZSE",
+          "中国股市",
+          "沪深两市",
+          "沪深300",
+          "上证指数"
+        ],
+        "soft": [
+          "A股市场",
+          "内地股市",
+          "A股行情",
+          "两市"
+        ]
+      },
+      "US_STOCK": {
+        "hard": [
+          "US stocks",
+          "American stocks",
+          "美股",
+          "US_STOCK",
+          "NYSE",
+          "Wall Street",
+          "美国股票",
+          "US equities",
+          "S&P 500",
+          "Dow Jones",
+          "道琼斯"
+        ],
+        "soft": [
+          "美国市场",
+          "美股市场",
+          "华尔街",
+          "US market"
+        ]
+      },
+      "AI": {
+        "hard": [
+          "artificial intelligence",
+          "Artificial Intelligence",
+          "人工智能",
+          "大模型",
+          "LLM",
+          "Nvidia",
+          "NVDA",
+          "ChatGPT",
+          "AI chips",
+          "AI companies",
+          "AI stocks",
+          "AI概念",
+          "AI算力",
+          "算力",
+          "OpenAI",
+          "xAI",
+          "Anthropic"
+        ],
+        "soft": [
+          "machine learning",
+          "deep learning",
+          "inference",
+          "foundation model",
+          "智算",
+          "AI基础设施"
+        ]
+      },
+      "CRYPTO": {
+        "hard": [
+          "crypto",
+          "Crypto",
+          "cryptocurrency",
+          "Cryptocurrency",
+          "加密货币",
+          "数字货币",
+          "blockchain",
+          "Blockchain",
+          "区块链",
+          "Web3",
+          "DeFi",
+          "digital assets",
+          "Digital Assets"
+        ],
+        "soft": [
+          "crypto market",
+          "加密市场",
+          "数字资产市场",
+          "on-chain"
+        ]
+      },
+      "ALTCOIN": {
+        "hard": [
+          "altcoin",
+          "Altcoin",
+          "altcoins",
+          "山寨币",
+          "SOL",
+          "Solana",
+          "XRP",
+          "Ripple",
+          "ADA",
+          "Cardano",
+          "DOGE",
+          "Dogecoin",
+          "altseason",
+          "ETH altcoin",
+          "DeFi tokens"
+        ],
+        "soft": [
+          "代币",
+          "链上资产",
+          "非BTC加密",
+          "小币种"
+        ]
+      },
+      "EV_BATTERY": {
+        "hard": [
+          "EV battery",
+          "动力电池",
+          "电池",
+          "CATL",
+          "宁德时代",
+          "储能",
+          "电芯",
+          "battery pack",
+          "电池材料",
+          "正极材料",
+          "负极材料",
+          "电解液",
+          "隔膜",
+          "磷酸铁锂",
+          "三元锂"
+        ],
+        "soft": [
+          "新能源电池",
+          "锂电池",
+          "固态电池",
+          "电池产业链"
+        ]
+      },
+      "CHINA_COMMODITY": {
+        "hard": [
+          "中国大宗商品",
+          "国内大宗",
+          "商品期货",
+          "CHINA_COMMODITY",
+          "DCE",
+          "SHFE",
+          "INE",
+          "GFE",
+          "中国期货市场",
+          "内盘商品",
+          "螺纹钢",
+          "铁矿石",
+          "动力煤",
+          "甲醇",
+          "黑色系",
+          "焦煤",
+          "焦炭"
+        ],
+        "soft": [
+          "商品",
+          "大宗",
+          "国内期货",
+          "有色金属期货",
+          "国内工业品"
+        ]
+      },
+      "HOG": {
+        "hard": [
+          "HOG",
+          "生猪",
+          "猪价",
+          "猪肉",
+          "hog",
+          "hogs",
+          "pork",
+          "Pork",
+          "猪",
+          "LH",
+          "LH.DCE",
+          "LH2609.DCE"
+        ],
+        "soft": [
+          "养猪",
+          "猪周期",
+          "生猪存栏",
+          "能繁母猪"
+        ]
+      },
+      "AGRICULTURE": {
+        "hard": [
+          "agriculture",
+          "Agriculture",
+          "农产品",
+          "agricultural commodities",
+          "AGRICULTURE",
+          "粮食",
+          "农业",
+          "农产",
+          "CBOT",
+          "agri",
+          "AGRI"
+        ],
+        "soft": [
+          "agro",
+          "crop prices",
+          "农商",
+          "涉农",
+          "农业板块",
+          "粮食价格"
+        ]
+      }
+    }
+  },
+  "watchlists": [
+    {
+      "id": "default",
+      "name": "My Watchlist",
+      "symbols": [
+        {
+          "name": "紫金矿业",
+          "name_zh": "紫金矿业",
+          "code": "601899.SH",
+          "abbr": "ZJMY",
+          "market": "A_SHARE",
+          "asset_type": "EQUITY",
+          "currency": "CNY",
+          "price_source_id": "601899.SH",
+          "opinion_asset_classes": [
+            "COPPER",
+            "GOLD"
+          ]
+        },
+        {
+          "name": "华泰柏瑞沪深300ETF",
+          "name_zh": "沪深300ETF",
+          "code": "510300.SH",
+          "abbr": "CSI300_ETF",
+          "asset_class": "CHINA_A_SHARE",
+          "asset_classes": [
+            "CHINA_A_SHARE"
+          ],
+          "market": "A_SHARE",
+          "asset_type": "EQUITY",
+          "currency": "CNY",
+          "price_source_id": "510300.SH",
+          "opinion_asset_classes": [
+            "CHINA_A_SHARE",
+            "CN_STOCK",
+            "CHINA_EQUITY"
+          ]
+        },
+        {
+          "name": "科创50ETF",
+          "name_zh": "科创50ETF",
+          "code": "588000.SH",
+          "abbr": "STAR50_ETF",
+          "asset_class": "STAR50",
+          "market": "A_SHARE",
+          "asset_type": "EQUITY",
+          "currency": "CNY",
+          "price_source_id": "588000.SH",
+          "opinion_asset_classes": [
+            "STAR50",
+            "CN_STOCK",
+            "CHINA_EQUITY"
+          ]
+        },
+        {
+          "name": "腾讯控股",
+          "name_zh": "腾讯控股",
+          "code": "0700.HK",
+          "abbr": "TENCENT",
+          "enabled": false,
+          "market": "HK_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "HKD",
+          "price_source_id": "0700.HK",
+          "opinion_asset_classes": [
+            "HK_STOCK",
+            "HK_TECH",
+            "CHINA_TECH"
+          ]
+        },
+        {
+          "name": "南方恒生科技",
+          "name_zh": "南方恒生科技",
+          "code": "3033.HK",
+          "abbr": "HSTECH_ETF",
+          "asset_class": "HK_TECH",
+          "asset_classes": [
+            "HK_TECH"
+          ],
+          "market": "HK_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "HKD",
+          "price_source_id": "3033.HK"
+        },
+        {
+          "name": "Apple",
+          "name_zh": "苹果",
+          "code": "AAPL",
+          "abbr": "AAPL",
+          "enabled": false,
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "AAPL",
+          "opinion_asset_classes": [
+            "US_STOCK",
+            "NASDAQ",
+            "AI"
+          ]
+        },
+        {
+          "name": "iShares MSCI Japan ETF",
+          "name_zh": "日本股票ETF",
+          "code": "EWJ",
+          "abbr": "EWJ",
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "EWJ"
+        },
+        {
+          "name": "Invesco QQQ Trust",
+          "name_zh": "纳指100ETF",
+          "code": "QQQ",
+          "abbr": "QQQ",
+          "asset_class": "US_TECH",
+          "asset_classes": [
+            "US_TECH"
+          ],
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "QQQ",
+          "opinion_asset_classes": [
+            "US_STOCK",
+            "NASDAQ",
+            "US_TECH"
+          ]
+        },
+        {
+          "name": "SPDR S&P 500 ETF Trust",
+          "name_zh": "标普500ETF",
+          "code": "SPY",
+          "abbr": "SPY",
+          "asset_class": "US_EQUITY",
+          "asset_classes": [
+            "US_EQUITY"
+          ],
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "SPY",
+          "opinion_asset_classes": [
+            "US_STOCK",
+            "US_EQUITY"
+          ]
+        },
+        {
+          "name": "iShares 20+ Year Treasury Bond ETF",
+          "name_zh": "20年美债ETF",
+          "code": "TLT",
+          "abbr": "TLT",
+          "asset_class": "US_TREASURY",
+          "asset_classes": [
+            "US_TREASURY"
+          ],
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "TLT",
+          "opinion_asset_classes": [
+            "US_TREASURY"
+          ]
+        },
+        {
+          "name": "iShares MSCI South Korea ETF",
+          "name_zh": "韩国股票ETF",
+          "code": "EWY",
+          "abbr": "EWY",
+          "asset_class": "KOREA_EQUITY",
+          "asset_classes": [
+            "KOREA_EQUITY"
+          ],
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "EWY",
+          "opinion_asset_classes": [
+            "KOREA_EQUITY"
+          ]
+        },
+        {
+          "name": "iShares 3-7 Year Treasury Bond ETF",
+          "name_zh": "美国3-7年国债ETF",
+          "code": "IEI",
+          "abbr": "IEI",
+          "market": "US_STOCK",
+          "asset_type": "EQUITY",
+          "currency": "USD",
+          "price_source_id": "IEI"
+        },
+        {
+          "name": "黄金主连",
+          "name_zh": "黄金主连",
+          "code": "AU_SHF",
+          "abbr": "AU",
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "AU_SHF"
+        },
+        {
+          "name": "白银主连",
+          "name_zh": "白银主连",
+          "code": "AG_SHF",
+          "abbr": "AG",
+          "enabled": false,
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "AG_SHF",
+          "opinion_asset_classes": [
+            "SILVER",
+            "PRECIOUS_METALS"
+          ]
+        },
+        {
+          "name": "30年国债期货",
+          "name_zh": "30年国债期货",
+          "code": "TL_CFX",
+          "abbr": "TL",
+          "asset_class": "CHINA_BOND",
+          "asset_classes": [
+            "CHINA_BOND"
+          ],
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "TL_CFX"
+        },
+        {
+          "name": "沪深300股指期货",
+          "name_zh": "沪深300股指期货",
+          "code": "IF_CFX",
+          "abbr": "IF",
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "IF_CFX"
+        },
+        {
+          "name": "碳酸锂期货",
+          "name_zh": "碳酸锂期货",
+          "code": "LC_GFE",
+          "abbr": "LC",
+          "enabled": false,
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "LC_GFE",
+          "opinion_asset_classes": [
+            "LITHIUM",
+            "EV_BATTERY",
+            "CHINA_COMMODITY"
+          ]
+        },
+        {
+          "name": "沪铜期货",
+          "name_zh": "沪铜期货",
+          "code": "CU_SHF",
+          "abbr": "CU",
+          "asset_class": "COPPER",
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "CU_SHF"
+        },
+        {
+          "name": "生猪期货",
+          "name_zh": "生猪期货",
+          "code": "LH_DCE",
+          "abbr": "LH",
+          "enabled": false,
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "LH_DCE",
+          "opinion_asset_classes": [
+            "HOG",
+            "AGRICULTURE"
+          ]
+        },
+        {
+          "name": "玉米期货",
+          "name_zh": "玉米期货",
+          "code": "C_DCE",
+          "abbr": "CORN",
+          "enabled": false,
+          "market": "CN_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "CNY",
+          "price_source_id": "C_DCE",
+          "opinion_asset_classes": [
+            "CORN",
+            "AGRICULTURE"
+          ]
+        },
+        {
+          "name": "WTI Crude Oil Futures",
+          "name_zh": "WTI原油期货",
+          "code": "CL=F",
+          "abbr": "CL_F",
+          "market": "US_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "USD",
+          "price_source_id": "CL=F"
+        },
+        {
+          "name": "S&P 500 Futures",
+          "name_zh": "标普500期货",
+          "code": "ES=F",
+          "abbr": "ES_F",
+          "market": "US_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "USD",
+          "price_source_id": "ES=F"
+        },
+        {
+          "name": "Gold Futures",
+          "name_zh": "COMEX黄金期货",
+          "code": "GC=F",
+          "abbr": "GC_F",
+          "market": "US_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "USD",
+          "price_source_id": "GC=F"
+        },
+        {
+          "name": "Nasdaq 100 Futures",
+          "name_zh": "纳指100期货",
+          "code": "NQ=F",
+          "abbr": "NQ_F",
+          "market": "US_FUTURES",
+          "asset_type": "FUTURE",
+          "currency": "USD",
+          "price_source_id": "NQ=F"
+        },
+        {
+          "name": "Bitcoin",
+          "name_zh": "比特币",
+          "code": "BTCUSDT",
+          "abbr": "BTC",
+          "market": "CRYPTO",
+          "asset_type": "CRYPTO",
+          "currency": "USDT",
+          "price_source_id": "BTCUSDT"
+        },
+        {
+          "name": "Bitcoin Perpetual",
+          "name_zh": "比特币永续",
+          "code": "BTCUSDT_SWAP",
+          "abbr": "BTC_SWAP",
+          "market": "CRYPTO",
+          "asset_type": "FUTURE",
+          "currency": "USDT",
+          "price_source_id": "BTCUSDT_SWAP"
+        },
+        {
+          "name": "Ethereum",
+          "name_zh": "以太坊",
+          "code": "ETHUSDT",
+          "abbr": "ETH",
+          "enabled": false,
+          "market": "CRYPTO",
+          "asset_type": "CRYPTO",
+          "currency": "USDT",
+          "price_source_id": "ETHUSDT",
+          "opinion_asset_classes": [
+            "ETH",
+            "CRYPTO",
+            "ALTCOIN"
+          ]
+        },
+        {
+          "name": "Ethereum Perpetual",
+          "name_zh": "以太坊永续",
+          "code": "ETHUSDT_SWAP",
+          "abbr": "ETH_SWAP",
+          "enabled": false,
+          "market": "CRYPTO",
+          "asset_type": "FUTURE",
+          "currency": "USDT",
+          "price_source_id": "ETHUSDT_SWAP"
+        }
+      ]
+    }
+  ],
+  "watchlist_evidence": "config/config.json explicitly references this example-named file; runtime use not independently verified",
+  "opinion_mapping": {
+    "primary_asset_class_normalization": {
+      "AU": "GOLD",
+      "GC": "GOLD",
+      "AG": "SILVER",
+      "SI": "SILVER",
+      "WTI": "CRUDE_OIL",
+      "CL": "CRUDE_OIL",
+      "QQQ": "US_TECH"
+    },
+    "primary_asset_class_overrides": {
+      "601899.SH": "COPPER+GOLD",
+      "0700.HK": "0700.HK",
+      "3033.HK": "HK_TECH",
+      "AAPL": "AAPL",
+      "EWJ": "JAPAN_EQUITY",
+      "QQQ": "US_TECH",
+      "SPY": "US_EQUITY",
+      "TLT": "US_TREASURY",
+      "EWY": "KOREA_EQUITY",
+      "510300.SH": "CHINA_A_SHARE",
+      "588000.SH": "STAR50",
+      "IEI": "US_TREASURY",
+      "AU_SHF": "GOLD",
+      "AG_SHF": "SILVER",
+      "TL_CFX": "CHINA_BOND",
+      "TL2606.CFX": "CHINA_BOND",
+      "IF_CFX": "CHINA_A_SHARE",
+      "LC_GFE": "LITHIUM",
+      "LC2605.GFE": "LITHIUM",
+      "CU_SHF": "COPPER",
+      "CU2604.SHF": "COPPER",
+      "CL=F": "CRUDE_OIL",
+      "ES=F": "US_EQUITY",
+      "GC=F": "GOLD",
+      "NQ=F": "US_TECH",
+      "BTCUSDT": "BITCOIN",
+      "BTCUSDT_SWAP": "BITCOIN"
+    },
+    "asset_class_display_names": {
+      "COPPER+GOLD": "铜+黄金",
+      "0700.HK": "腾讯控股",
+      "3033.HK": "南方恒生科技",
+      "HK_TECH": "恒生科技",
+      "AAPL": "苹果",
+      "JAPAN_EQUITY": "日股",
+      "US_TREASURY": "美债",
+      "GOLD": "黄金",
+      "SILVER": "白银",
+      "STAR50": "科创50",
+      "KOREA_EQUITY": "韩国股市",
+      "CHINA_BOND": "中国债券",
+      "CHINA_A_SHARE": "沪深300",
+      "LITHIUM": "碳酸锂",
+      "COPPER": "铜",
+      "CRUDE_OIL": "原油",
+      "US_EQUITY": "标普500",
+      "US_TECH": "纳指100",
+      "BITCOIN": "比特币"
+    }
+  },
+  "search_keywords": {
+    "GOLD": [
+      "gold",
+      "gold price",
+      "comex gold"
+    ],
+    "SILVER": [
+      "silver",
+      "silver price",
+      "comex silver"
+    ],
+    "CRUDE_OIL": [
+      "oil price",
+      "wti crude",
+      "brent oil"
+    ],
+    "BITCOIN": [
+      "bitcoin",
+      "btc",
+      "bitcoin price"
+    ],
+    "US_TECH": [
+      "nasdaq 100",
+      "nasdaq futures",
+      "qqq"
+    ],
+    "US_EQUITY": [
+      "s&p 500",
+      "spx",
+      "es futures"
+    ],
+    "US_TREASURY": [
+      "us 10 year treasury yield",
+      "10 year yield",
+      "treasury yield"
+    ],
+    "CHINA_A_SHARE": [
+      "沪深300",
+      "中证300",
+      "CSI 300"
+    ],
+    "CHINA_BOND": [
+      "中国国债",
+      "中国债券",
+      "10年国债收益率 中国"
+    ],
+    "COPPER": [
+      "copper price",
+      "comex copper",
+      "lme copper"
+    ],
+    "LITHIUM": [
+      "lithium carbonate",
+      "碳酸锂",
+      "锂价"
+    ],
+    "JAPAN_EQUITY": [
+      "nikkei 225",
+      "日经225",
+      "japan stocks"
+    ],
+    "KOREA_EQUITY": [
+      "KOSPI",
+      "韩国股市",
+      "韩股"
+    ],
+    "HK_TECH": [
+      "hang seng tech",
+      "恒生科技",
+      "hang seng tech index"
+    ],
+    "STAR50": [
+      "STAR 50",
+      "科创板",
+      "硬科技"
+    ]
+  },
+  "heat_universe": [
+    {
+      "asset_class": "BITCOIN",
+      "enabled": true,
+      "display_order": 10
+    },
+    {
+      "asset_class": "GOLD",
+      "enabled": true,
+      "display_order": 20
+    },
+    {
+      "asset_class": "CRUDE_OIL",
+      "enabled": true,
+      "display_order": 30
+    },
+    {
+      "asset_class": "US_TREASURY",
+      "enabled": true,
+      "display_order": 40
+    },
+    {
+      "asset_class": "US_TECH",
+      "enabled": true,
+      "display_order": 50
+    },
+    {
+      "asset_class": "US_EQUITY",
+      "enabled": true,
+      "display_order": 60
+    },
+    {
+      "asset_class": "CHINA_A_SHARE",
+      "enabled": true,
+      "display_order": 70
+    },
+    {
+      "asset_class": "CHINA_BOND",
+      "enabled": true,
+      "display_order": 80
+    },
+    {
+      "asset_class": "HK_TECH",
+      "enabled": true,
+      "display_order": 90
+    },
+    {
+      "asset_class": "STAR50",
+      "enabled": true,
+      "display_order": 100
+    }
+  ]
+}

@@ -1,0 +1,1385 @@
+{
+  "kind": "reference_metadata",
+  "migrated_on": "2026-11-16",
+  "source_root": "/home/devops/investment-assistant",
+  "sources": [
+    "config/data_sources.json",
+    "news_collector/config/sources_rss.json",
+    "news_collector/config/sources_wechat.json"
+  ],
+  "status": "historical_reference_not_runtime_config",
+  "market_providers": [
+    {
+      "id": "tushare",
+      "coverage": "A股、国内期货、ETF",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [],
+      "connection_reference": {
+        "http_url": "http://a.sszhixia.cn/"
+      },
+      "authentication": [
+        "environment:TUSHARE_TOKEN",
+        "environment:TUSHARE_HTTP_URL",
+        "private/credentials.json:market_data.tushare.token"
+      ]
+    },
+    {
+      "id": "alphavantage",
+      "coverage": "美股日线",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [],
+      "connection_reference": {
+        "base_url": "https://www.alphavantage.co/query",
+        "function": "TIME_SERIES_DAILY",
+        "outputsize": "compact"
+      },
+      "authentication": [
+        "environment:ALPHAVANTAGE_APIKEY",
+        "private/credentials.json:market_data.alphavantage.apikey"
+      ]
+    },
+    {
+      "id": "polygon",
+      "coverage": "美股行情",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [],
+      "connection_reference": {
+        "base_url": "https://api.polygon.io"
+      },
+      "authentication": [
+        "environment:POLYGON_APIKEY",
+        "private/credentials.json:market_data.polygon.apikey"
+      ]
+    },
+    {
+      "id": "yfinance",
+      "coverage": "美股、海外期货",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [
+        "us_stock_provider",
+        "us_futures_provider"
+      ],
+      "connection_reference": {
+        "auto_adjust": false
+      },
+      "authentication": []
+    },
+    {
+      "id": "bitget",
+      "coverage": "股票代币/合约行情",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [],
+      "connection_reference": {
+        "base_url": "https://api.bitget.com",
+        "product_type": "USDT-FUTURES",
+        "granularity": "1Dutc"
+      },
+      "authentication": []
+    },
+    {
+      "id": "binance",
+      "coverage": "加密现货与永续",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [
+        "crypto_provider"
+      ],
+      "connection_reference": {
+        "base_url": "https://api.binance.com",
+        "futures_base_url": "https://fapi.binance.com"
+      },
+      "authentication": []
+    },
+    {
+      "id": "okx",
+      "coverage": "永续资金费率、财经日历",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [],
+      "connection_reference": {
+        "base_url": "https://www.okx.com"
+      },
+      "authentication": []
+    },
+    {
+      "id": "futu",
+      "coverage": "港美股、ETF及其他证券资料",
+      "usage_status": "unverified",
+      "availability": "unverified",
+      "legacy_selected_for": [],
+      "connection_reference": {
+        "host": "127.0.0.1",
+        "port": 11111,
+        "market_prefix": "US.",
+        "hk_market_prefix": "HK."
+      },
+      "authentication": []
+    }
+  ],
+  "rss": [
+    {
+      "id": "macro_mornings",
+      "name": "Macro Mornings",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://macromornings.substack.com/feed",
+      "author": "Macro Mornings",
+      "tags": [
+        "macro",
+        "rates",
+        "liquidity"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "doomberg",
+      "name": "Doomberg",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://newsletter.doomberg.com/feed",
+      "author": "Doomberg",
+      "tags": [
+        "macro",
+        "energy",
+        "markets"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "michaeljburry",
+      "name": "Michael Burry",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://michaeljburry.substack.com/feed",
+      "author": "Michael Burry",
+      "tags": [
+        "macro",
+        "markets",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "wenli",
+      "name": "Wenli",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://wenli.substack.com/feed",
+      "author": "Wenli",
+      "tags": [
+        "macro",
+        "china",
+        "geopolitics"
+      ],
+      "language": "zh",
+      "legacy_enabled": false
+    },
+    {
+      "id": "capital_mischief",
+      "name": "Capital Mischief",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://charliepgarcia.substack.com/feed",
+      "author": "Charlie Garcia",
+      "tags": [
+        "macro",
+        "markets",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "mispriced_assets",
+      "name": "Mispriced Assets",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://mispricedassets.substack.com/feed",
+      "author": "Mispriced Assets",
+      "tags": [
+        "equities",
+        "value",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "key_context_tae_kim",
+      "name": "Key Context by Tae Kim",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://taekim.substack.com/feed",
+      "author": "Tae Kim",
+      "tags": [
+        "equities",
+        "tech",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "bonner_private_research",
+      "name": "Bonner Private Research",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://bonnerprivateresearch.substack.com/feed",
+      "author": "Bonner Private Research",
+      "tags": [
+        "macro",
+        "markets",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "coindesk",
+      "name": "CoinDesk",
+      "source_type": "rss",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss",
+      "author": "CoinDesk",
+      "tags": [
+        "crypto",
+        "macro",
+        "markets"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "bankless",
+      "name": "Bankless",
+      "source_type": "rss",
+      "url": "https://www.bankless.com/rss/feed",
+      "author": "Bankless",
+      "tags": [
+        "crypto",
+        "macro",
+        "markets"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "tker_sam_ro",
+      "name": "TKer",
+      "source_type": "substack",
+      "url": "https://www.tker.co/feed",
+      "author": "Sam Ro",
+      "tags": [
+        "macro",
+        "equities",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "panews_featured_column_1595591553929485",
+      "name": "PANews Featured In-Depth Column",
+      "source_type": "rss",
+      "url": "https://www.panewslab.com/rss.xml?lang=zh&type=NORMAL&featured=true&in-depth=true&column=1595591553929485",
+      "author": "PANews",
+      "tags": [
+        "crypto",
+        "macro",
+        "china"
+      ],
+      "language": "zh",
+      "legacy_enabled": false
+    },
+    {
+      "id": "the_reformed_broker",
+      "name": "The Reformed Broker",
+      "source_type": "rss",
+      "url": "https://thereformedbroker.com/feed/",
+      "author": "Joshua M. Brown",
+      "tags": [
+        "macro",
+        "markets",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "financial_times_home",
+      "name": "Financial Times",
+      "source_type": "rss",
+      "url": "https://www.ft.com/rss/home",
+      "author": "Financial Times",
+      "tags": [
+        "macro",
+        "news",
+        "world"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "odaily_posts",
+      "name": "Odaily Posts",
+      "source_type": "rss",
+      "url": "https://rss.odaily.news/rss/post",
+      "tags": [
+        "crypto",
+        "longform"
+      ],
+      "language": "zh",
+      "legacy_enabled": false
+    },
+    {
+      "id": "cnbc_investing",
+      "name": "CNBC Investing",
+      "source_type": "rss",
+      "url": "https://www.cnbc.com/id/15839069/device/rss/rss.html",
+      "tags": [
+        "macro",
+        "investing",
+        "us"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "reuters_business",
+      "name": "Reuters Business",
+      "source_type": "rss",
+      "url": "http://feeds.reuters.com/reuters/businessNews",
+      "tags": [
+        "macro",
+        "news",
+        "business"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "ray_dalio",
+      "name": "Principled Perspectives (Ray Dalio)",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://raydalio.substack.com/feed",
+      "author": "Ray Dalio",
+      "tags": [
+        "macro",
+        "markets",
+        "global"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "air_street_press",
+      "name": "Air Street Press",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://press.airstreet.com/feed",
+      "author": "Air Street Press",
+      "tags": [
+        "tech"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "alt_goes_mainstream",
+      "name": "Alt Goes Mainstream",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://altgoesmainstream.substack.com/feed",
+      "author": "Alt Goes Mainstream",
+      "tags": [
+        "equities",
+        "macro"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "animenomics",
+      "name": "Animenomics",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://news.animenomics.com/feed",
+      "author": "Animenomics",
+      "tags": [
+        "china",
+        "asia",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "appinvestor_tracking_the_business_of_app",
+      "name": "AppInvestor: Tracking the Business of Apps",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://appinvestor.substack.com/feed",
+      "author": "AppInvestor: Tracking the Business of Apps",
+      "tags": [
+        "equities",
+        "tech"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "archive_invest",
+      "name": "Archive Invest",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://archiveinvest.substack.com/feed",
+      "author": "Archive Invest",
+      "tags": [
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "asia_tech_review",
+      "name": "Asia Tech Review",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.asiatechreview.com/feed",
+      "author": "Asia Tech Review",
+      "tags": [
+        "china",
+        "asia",
+        "tech"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "beyond_the_hype_looking_past_management_",
+      "name": "Beyond The Hype - Looking Past Management & Wall Street Hype",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://enertuition.substack.com/feed",
+      "author": "Beyond The Hype - Looking Past Management & Wall Street Hype",
+      "tags": [
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "china_business_spotlight",
+      "name": "China Business Spotlight",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://chinabusinessspotlight.substack.com/feed",
+      "author": "China Business Spotlight",
+      "tags": [
+        "china",
+        "macro",
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "chipstrat",
+      "name": "Chipstrat",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.chipstrat.com/feed",
+      "author": "Chipstrat",
+      "tags": [
+        "semiconductors",
+        "tech"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "citrini_research",
+      "name": "Citrini Research",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.citriniresearch.com/feed",
+      "author": "Citrini Research",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "compounding_your_wealth",
+      "name": "Compounding Your Wealth",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://sergeycyw.substack.com/feed",
+      "author": "Compounding Your Wealth",
+      "tags": [
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "data_center_richness",
+      "name": "Data Center Richness",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://datacenterrichness.substack.com/feed",
+      "author": "Data Center Richness",
+      "tags": [
+        "tech"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "the_economist_off_the_charts",
+      "name": "The Economist: Off the Charts",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://theeconomistoffthecharts.substack.com/feed",
+      "author": "The Economist: Off the Charts",
+      "tags": [
+        "macro"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "equityedge_research",
+      "name": "EquityEdge Research",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://equityedgeresearch.substack.com/feed",
+      "author": "EquityEdge Research",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "global_equity_briefing",
+      "name": "Global Equity Briefing",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.globalequitybriefing.com/feed",
+      "author": "Global Equity Briefing",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "jordi_visser_macro_ai_crypto_substack",
+      "name": "Jordi Visser Macro-AI-Crypto Substack",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://visserlabs.substack.com/feed",
+      "author": "Jordi Visser Macro-AI-Crypto Substack",
+      "tags": [
+        "crypto",
+        "macro"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "kyla_s_newsletter",
+      "name": "Kyla's Newsletter",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://kyla.substack.com/feed",
+      "author": "Kyla's Newsletter",
+      "tags": [
+        "macro"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "murph_capital",
+      "name": "Murph Capital",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://murphcapital.substack.com/feed",
+      "author": "Murph Capital",
+      "tags": [
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "my_weekly_stock",
+      "name": "My Weekly Stock",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://myweeklystock.substack.com/feed",
+      "author": "My Weekly Stock",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "the_pareto_investor",
+      "name": "The Pareto Investor",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://paretoinvestor.substack.com/feed",
+      "author": "The Pareto Investor",
+      "tags": [
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "public_markets",
+      "name": "Public Markets",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://privatemarketsnews.substack.com/feed",
+      "author": "Public Markets",
+      "tags": [
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "random_walk",
+      "name": "Random Walk",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.therandomwalk.co/feed",
+      "author": "Random Walk",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "semianalysis",
+      "name": "SemiAnalysis",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://newsletter.semianalysis.com/feed",
+      "author": "SemiAnalysis",
+      "tags": [
+        "semiconductors",
+        "tech",
+        "equities"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "semivision",
+      "name": "SEMIVISION @_@",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://tspasemiconductor.substack.com/feed",
+      "author": "SEMIVISION @_@",
+      "tags": [
+        "semiconductors",
+        "tech"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "swiss_transparent_portfolio",
+      "name": "Swiss Transparent Portfolio",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://swisstransparentportfolio.substack.com/feed",
+      "author": "Swiss Transparent Portfolio",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "weighty_thoughts",
+      "name": "Weighty Thoughts",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://weightythoughts.com/feed",
+      "author": "Weighty Thoughts",
+      "tags": [
+        "macro"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "apricitas_economics",
+      "name": "Apricitas Economics",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.apricitas.io/feed",
+      "author": "Apricitas Economics",
+      "tags": [
+        "macro"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "cedar_grove_capital_management",
+      "name": "Cedar Grove Capital Management",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://cedargrovecapital.substack.com/feed",
+      "author": "Cedar Grove Capital Management",
+      "tags": [
+        "equities",
+        "macro"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "deeptech_asia",
+      "name": "DeepTech Asia",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.deeptech.asia/feed",
+      "author": "DeepTech Asia",
+      "tags": [
+        "china",
+        "asia",
+        "tech"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "entry_level_investing",
+      "name": "Entry Level Investing",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://ryanshannon.substack.com/feed",
+      "author": "Entry Level Investing",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "fabricated_knowledge",
+      "name": "Fabricated Knowledge",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.fabricatedknowledge.com/feed",
+      "author": "Fabricated Knowledge",
+      "tags": [
+        "semiconductors",
+        "tech"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "the_family_office_allocator",
+      "name": "The Family Office Allocator",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://jamesheathfo.substack.com/feed",
+      "author": "The Family Office Allocator",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "generational",
+      "name": "Generational",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.generational.pub/feed",
+      "author": "Generational",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "the_great_wall_street",
+      "name": "The Great Wall Street",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.greatwallstreet.net/feed",
+      "author": "The Great Wall Street",
+      "tags": [
+        "china",
+        "equities",
+        "macro"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "hedge_vision",
+      "name": "Hedge Vision",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://hedgevision.substack.com/feed",
+      "author": "Hedge Vision",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "long_term_pick",
+      "name": "Long-Term Pick",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://longtermpick.com/feed",
+      "author": "Long-Term Pick",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "mandates",
+      "name": "mandates",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://ethanding.substack.com/feed",
+      "author": "mandates",
+      "tags": [
+        "macro"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "maverick_equity_research",
+      "name": "Maverick Equity Research",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.maverickequityresearch.com/feed",
+      "author": "Maverick Equity Research",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "next_big_teng",
+      "name": "Next Big Teng",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://nextbigteng.substack.com/feed",
+      "author": "Next Big Teng",
+      "tags": [
+        "china",
+        "tech"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "semianalysis_old",
+      "name": "SemiAnalysis-Old",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://semianalysisold.substack.com/feed",
+      "author": "SemiAnalysis-Old",
+      "tags": [
+        "semiconductors",
+        "tech"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "semiconductor_things",
+      "name": "Semiconductor Things™",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.semiconductorthings.com/feed",
+      "author": "Semiconductor Things™",
+      "tags": [
+        "semiconductors",
+        "tech"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "simply_finance",
+      "name": "Simply Finance",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://simplyfinance.substack.com/feed",
+      "author": "Simply Finance",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "streetsmarts",
+      "name": "StreetSmarts",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.marketlabnewsletter.com/feed",
+      "author": "StreetSmarts",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "surf_the_wave",
+      "name": "Surf the Wave",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://surfthewave.substack.com/feed",
+      "author": "Surf the Wave",
+      "tags": [
+        "macro",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "tech_investments",
+      "name": "Tech Investments",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.techinvestments.io/feed",
+      "author": "Tech Investments",
+      "tags": [
+        "tech",
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    },
+    {
+      "id": "uncoveralpha",
+      "name": "UncoverAlpha",
+      "priority": 0,
+      "source_type": "substack",
+      "url": "https://www.uncoveralpha.com/feed",
+      "author": "UncoverAlpha",
+      "tags": [
+        "equities"
+      ],
+      "language": "en",
+      "legacy_enabled": false
+    }
+  ],
+  "wechat": {
+    "download_status": "legacy_service_permanently_offline",
+    "subscriptions": [
+      {
+        "keyword": "表舅是养基大户",
+        "name": "表舅是养基大户",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "funds",
+          "china"
+        ]
+      },
+      {
+        "keyword": "deepvan的逃生地牢",
+        "name": "deepvan的逃生地牢",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ]
+      },
+      {
+        "keyword": "起朱楼宴宾客",
+        "name": "起朱楼宴宾客",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ]
+      },
+      {
+        "keyword": "培风客",
+        "name": "培风客",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "E起来养基",
+        "name": "E起来养基",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "funds",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "表舅的边门",
+        "name": "表舅的边门",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "funds",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "债市硫磺岛",
+        "name": "债市硫磺岛",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "bonds",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "今天你看多了吗",
+        "name": "今天你看多了吗",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "EarlETF",
+        "name": "EarlETF",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "etf",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "吴说Real",
+        "name": "吴说Real",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "crypto",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "美投investing",
+        "name": "美投investing",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "us",
+          "macro"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "华尔街见闻",
+        "name": "华尔街见闻",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "秦小明",
+        "name": "秦小明",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "中金点睛",
+        "name": "中金点睛",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "research",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "深潮 TechFlow",
+        "name": "深潮 TechFlow",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "crypto",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "中国人民银行",
+        "name": "中国人民银行",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "policy",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "今天纳指新高了吗",
+        "name": "今天纳指新高了吗",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "us",
+          "equity"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "债券今天有蛋吗",
+        "name": "债券今天有蛋吗",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "bonds",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "180K",
+        "name": "180K",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "us"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "Spread Trading",
+        "name": "Spread Trading",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "us"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "美股研究社",
+        "name": "美股研究社",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "us",
+          "equity"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "紫金天风有色研究",
+        "name": "紫金天风有色研究",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "commodities",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "太平洋农业",
+        "name": "太平洋农业",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "agriculture",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "戴清策略思考",
+        "name": "戴清策略思考",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "猫比刀",
+        "name": "猫比刀",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "地平线全球策略",
+        "name": "地平线全球策略",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "global"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "思哲与创富",
+        "name": "思哲与创富",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "肖小跑",
+        "name": "肖小跑",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "刘备教授",
+        "name": "刘备教授",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "周期循环图谱",
+        "name": "周期循环图谱",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "叙事",
+        "name": "叙事",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "格隆汇APP",
+        "name": "格隆汇APP",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "equity",
+          "china"
+        ],
+        "legacy_enabled": true
+      },
+      {
+        "keyword": "2030FY",
+        "name": "2030FY",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": false
+      },
+      {
+        "keyword": "大滑头",
+        "name": "大滑头",
+        "priority": 0,
+        "tags": [
+          "wechat",
+          "macro",
+          "china"
+        ],
+        "legacy_enabled": true
+      }
+    ],
+    "future_download_todo": "docs/TODO.md"
+  },
+  "other_sources": [
+    {
+      "id": "google_trends",
+      "purpose": "搜索热度",
+      "usage_status": "unverified"
+    },
+    {
+      "id": "polymarket",
+      "purpose": "预测市场事件与概率变化",
+      "usage_status": "unverified"
+    },
+    {
+      "id": "manual_import",
+      "purpose": "人工收集文章与事件",
+      "usage_status": "unverified"
+    }
+  ]
+}
